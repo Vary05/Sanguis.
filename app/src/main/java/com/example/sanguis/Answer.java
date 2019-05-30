@@ -13,7 +13,5 @@ public class Answer {
         return ans;
     }
 
-    public int getWrong() {
-        return wrong;
-    }
+    public int getWrong() {return wrong; }
 }

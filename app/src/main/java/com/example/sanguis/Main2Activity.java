@@ -1,5 +1,8 @@
 package com.example.sanguis;
 
+import android.arch.persistence.room.Database;
+import android.arch.persistence.room.Room;
+import android.arch.persistence.room.RoomDatabase;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -88,6 +91,7 @@ public class Main2Activity extends AppCompatActivity {
                                         else
                                         {
                                             next.setVisibility(View.GONE);
+
                                         }
 
                                     }
@@ -100,6 +104,12 @@ public class Main2Activity extends AppCompatActivity {
                 });
             }
         });
+
     }
+
+    AppDatabase db=App.getInstance().getDatabase();
+    TestResultDao testResultDao=db.testResultDao();
+    TestResult testResult=new TestResult();
+    
 
 }
